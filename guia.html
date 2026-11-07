@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShieldCheck - Guía Pedagógica</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">ShieldCheck</div>
+        <nav>
+            <button id="menu-toggle" aria-expanded="false" aria-label="Abrir menú">Menú</button>
+            <ul id="menu-nav">
+                <li><a href="index.html">Evaluar</a></li>
+                <li><a href="historial.html">Historial</a></li>
+                <li><a href="guia.html" class="active">Guía</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="central-panel wide-panel">
+            <div class="panel-header">
+                <h1>Guía Pedagógica de Ciberseguridad</h1>
+                <p>Recomendaciones teóricas y técnicas basadas en los estándares criptográficos modernos para la
+                    mitigación de ataques de fuerza bruta y diccionario.</p>
+            </div>
+
+            <div class="consejos-grid">
+                <article class="consejo-seguridad">
+                    <h2>1. Longitud Criptográfica Mínima</h2>
+                    <p>El estándar OWASP recomienda que las frases de contraseña tengan una longitud mínima de 12 a 16
+                        caracteres. Cada carácter adicional incrementa de forma exponencial la complejidad computacional
+                        necesaria para romper el hash mediante ataques de fuerza bruta.</p>
+                </article>
+
+                <article class="consejo-seguridad">
+                    <h2>2. Entropía y Variabilidad de Caracteres</h2>
+                    <p>Combinar mayúsculas, minúsculas, números y caracteres especiales (símbolos) rompe los patrones
+                        predecibles de los diccionarios comunes. Esto eleva la entropía de la clave, obligando al
+                        atacante a escanear un espacio combinatorio infinitamente mayor.</p>
+                </article>
+
+                <article class="consejo-seguridad">
+                    <h2>3. Gestión de Credenciales Únicas</h2>
+                    <p>Nunca reutilices la misma contraseña en diferentes entornos o plataformas. Si un servicio se ve
+                        comprometido, los atacantes utilizarán técnicas de "Credential Stuffing" para intentar ingresar
+                        de forma automática al resto de tus cuentas.</p>
+                </article>
+
+                <article class="consejo-seguridad">
+                    <h2>4. Factor de Autenticación Múltiple (MFA)</h2>
+                    <p>Aunque una contraseña sea calificada como robusta o fuerte por este medidor, siempre debe
+                        complementarse con un segundo factor de autenticación (aplicaciones autenticadoras o llaves
+                        físicas). Esto garantiza una capa de protección biométrica o temporal de respaldo.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Programación II - Unidad II - FIIS UNAS - Equipo 2</p>
+    </footer>
+
+    <script src="js/datos.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
