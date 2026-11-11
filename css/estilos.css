@@ -142,6 +142,11 @@ h1 {
     margin-bottom: 0.5rem;
     background: linear-gradient(135deg, #ffffff 40%, var(--text-muted) 100%);
     -webkit-background-clip: text;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #ffffff 40%, var(--text-muted) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -184,6 +189,15 @@ select:focus {
     outline: none;
     border-color: var(--cyber-blue);
     box-shadow: 0 0 15px rgba(0, 162, 255, 0.15);
+}
+
+.error-message {
+    color: var(--cyber-crimson);
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-top: 0.2rem;
+    min-height: 14px;
+    display: block;
 }
 
 .password-container {
@@ -238,6 +252,12 @@ button[type="submit"]:hover,
     transform: translateY(-1px);
     box-shadow: 0 6px 20px rgba(0, 162, 255, 0.4);
     filter: brightness(1.1);
+}
+
+.btn-export {
+    background: linear-gradient(135deg, var(--cyber-neon) 0%, #00aa55 100%) !important;
+    color: #060913 !important;
+    margin-top: 1rem;
 }
 
 #medidor-fuerza {
@@ -322,7 +342,7 @@ button[type="submit"]:hover,
 
 #filtros-contenedor {
     display: grid;
-    grid-template-columns: 2fr 1fr auto;
+    grid-template-columns: 2fr 1fr 1fr;
     gap: 1rem;
     margin-bottom: 1.5rem;
 }
@@ -362,6 +382,29 @@ td {
 
 tr:hover td {
     background: rgba(0, 162, 255, 0.02);
+}
+
+.tabla-responsiva button {
+    background: #162447;
+    border: 1px solid #253b75;
+    color: var(--text-muted);
+    padding: 0.35rem 0.7rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    transition: var(--fx-smooth);
+}
+
+.tabla-responsiva button:first-child:hover {
+    color: var(--cyber-neon);
+    border-color: var(--cyber-neon);
+    background: rgba(0, 255, 136, 0.04);
+}
+
+.tabla-responsiva button:last-child:hover {
+    color: var(--cyber-crimson);
+    border-color: var(--cyber-crimson);
+    background: rgba(255, 51, 68, 0.04);
 }
 
 #acciones-datos {
@@ -431,6 +474,7 @@ footer {
         padding: 1.5rem;
         border-bottom: 1px solid #1c2c54;
         gap: 1.2rem;
+        z-index: 200;
     }
 
     #lista-criterios {
@@ -443,5 +487,15 @@ footer {
 
     .central-panel {
         padding: 1.5rem;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 960px) {
+    #lista-criterios {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .central-panel {
+        padding: 2rem;
     }
 }

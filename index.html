@@ -23,27 +23,28 @@
     </header>
 
     <main>
-        <!-- Bloque contenedor -->
         <section class="central-panel">
             <div class="panel-header">
                 <h1>Evalúa una contraseña</h1>
-                <p>Procesamiento 100% local. Tus datos sensibles permanecen siempre en tu dispositivo.
-                </p>
+                <p>Procesamiento 100% local. Tus datos sensibles permanecen siempre en tu dispositivo.</p>
             </div>
 
             <form id="evaluador-form" novalidate>
                 <div class="form-group">
                     <label for="servicio">SERVICIO / ENTORNO</label>
-                    <input type="text" id="servicio" placeholder="Ej: Correo Institucional, Banca" required>
+                    <input type="text" id="servicio" placeholder="Ej: Correo Institucional, Banca"
+                        aria-describedby="error-servicio" required>
+                    <span id="error-servicio" class="error-message" aria-live="polite"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="password">CONTRASEÑA A EVALUAR</label>
                     <div class="password-container">
                         <input type="password" id="password" autocomplete="new-password"
-                            placeholder="Escribe tu clave de prueba" required>
+                            placeholder="Escribe tu clave de prueba" aria-describedby="error-password" required>
                         <button type="button" id="toggle-password-btn">Mostrar</button>
                     </div>
+                    <span id="error-password" class="error-message" aria-live="polite"></span>
                 </div>
 
                 <button type="submit">Registrar contraseña</button>
