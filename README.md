@@ -31,11 +31,11 @@ A continuación se detalla la matriz de progreso del desarrollo dividido en las 
 
 | **Etapa** | **Versión** | **Componentes y Entregables** | **Estado** | **Evidencia de Código** |
 | :--- | :---: | :--- | :---: | :--- |
-| **E1: Estructura y Navegación** | `v0.1` | Maquetación base con HTML semántico. Formulario seguro estructurado, tabla de historial y sección pedagógica. | 🟢 Completado | [Ver Pull Request](https://github.com) |
-| **E2: Diseño Responsive** | `v0.2` | Mobile-first con Flexbox/Grid y variables CSS. Centrado estricto de paneles y soporte para 3 anchos de pantalla. | 🟢 Completado | [Ver Pull Request](https://github.com) |
-| **E3: Registro y Presentación** | `v0.3` | Lógica JS para persistencia JSON en localStorage. Buscador y filtros algorítmicos integrados. | 🟢 Completado | [Ver Pull Request](https://github.com) |
-| **E4: Interfaz y Usabilidad** | `v0.4` | Validación accesible en tiempo real. Gestión de estados de foco/error y cumplimiento de 5 heurísticas de Nielsen. | 🟢 Completado | [Ver Pull Request](https://github.com) |
-| **E5: Integración y Entrega** | `v1.0` | Despliegue productivo, documentación de pruebas de aceptación y análisis de seguridad definitivo. | 🟢 Completado | [Ver Pull Request](https://github.com) |
+| **E1: Estructura y Navegación** | `v0.1` | Maquetación base con HTML semántico. Formulario seguro estructurado, tabla de historial y sección pedagógica. | 🟢 Completado | [Ver Rama](https://github.com) |
+| **E2: Diseño Responsive** | `v0.2` | Mobile-first con Flexbox/Grid y variables CSS. Centrado estricto de paneles y soporte para 3 anchos de pantalla. | 🟢 Completado | [Ver Rama](https://github.com) |
+| **E3: Registro y Presentación** | `v0.3` | Lógica JS para persistencia JSON en localStorage. Buscador y filtros algorítmicos integrados. | 🟢 Completado | [Ver Rama](https://github.com) |
+| **E4: Interfaz y Usabilidad** | `v0.4` | Validación accesible en tiempo real. Gestión de estados de foco/error y cumplimiento de 5 heurísticas de Nielsen. | 🟢 Completado | [Ver Rama](https://github.com) |
+| **E5: Integración y Entrega** | `v1.0` | Despliegue productivo, documentación de pruebas de aceptación y análisis de seguridad definitivo. | 🟢 Completado | [Ver Rama](https://github.com) |
 
 ---
 
