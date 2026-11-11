@@ -490,12 +490,25 @@ footer {
     }
 }
 
-@media (min-width: 601px) and (max-width: 960px) {
-    #lista-criterios {
-        grid-template-columns: repeat(2, 1fr);
+@media (max-width: 600px) {
+    #resumen-estadistico {
+        grid-template-columns: 1fr !important;
+        gap: 0.8rem !important;
+        padding: 1rem !important;
     }
 
-    .central-panel {
-        padding: 2rem;
+    .stat-card {
+        text-align: center;
+        padding: 0.5rem 0;
+        border-bottom: 1px dashed rgba(255, 255, 255, 0.05);
+    }
+
+    .stat-card:last-child {
+        border-bottom: none;
+    }
+
+    #filtros-contenedor {
+        grid-template-columns: 1fr !important;
+        gap: 0.8rem !important;
     }
 }
