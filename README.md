@@ -41,8 +41,7 @@ A continuación se detalla la matriz de progreso del desarrollo dividido en las 
 
 ## Despliegue de la Aplicación
 El sitio web se encuentra publicado a través de la infraestructura de alojamiento estático de GitHub:
-**[Visitar ShieldCheck en GitHub Pages](https://github.io)**
-
+https://sharithediaz.github.io/ProgramacionII_Proyectos/
 ---
 
 ## 🛠️ Arquitectura y Estructura del Repositorio
