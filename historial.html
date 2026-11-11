@@ -13,6 +13,7 @@
     <header>
         <div class="logo">ShieldCheck</div>
         <nav>
+            <button id="menu-toggle" aria-expanded="false" aria-label="Abrir menú">Menú</button>
             <ul id="menu-nav">
                 <li><a href="index.html">Evaluar</a></li>
                 <li><a href="historial.html" class="active">Historial</a></li>
@@ -22,21 +23,52 @@
     </header>
 
     <main>
-        <!-- Panel más ancho exclusivo para la visualización de datos sin XSS -->
         <section class="central-panel wide-panel">
             <div class="panel-header">
                 <h1>Historial de Evaluaciones</h1>
                 <p>Las contraseñas evaluadas están ocultas para garantizar tu total privacidad.</p>
             </div>
 
-            <!-- Controles algorítmicos exigidos en la rúbrica -->
-            <div id="filtros-contenedor">
+            <!-- 📊 NUEVO: Contenedor del Resumen Estadístico exigido por el docente -->
+            <div id="resumen-estadistico"
+                style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1.5rem; background: rgba(4, 6, 14, 0.4); padding: 1.2rem; border-radius: 8px; border: 1px solid #1c2c54;">
+                <div class="stat-card">
+                    <div style="font-size: 0.75rem; color: #7ca3cc; font-weight: 700; text-transform: uppercase;">
+                        Puntaje Promedio</div>
+                    <div id="stat-promedio" style="font-size: 1.6rem; font-weight: 800; color: #00a2ff;">0.0</div>
+                </div>
+                <div class="stat-card">
+                    <div style="font-size: 0.75rem; color: #7ca3cc; font-weight: 700; text-transform: uppercase;">%
+                        Contraseñas Fuertes</div>
+                    <div id="stat-porcentaje" style="font-size: 1.6rem; font-weight: 800; color: #00ff88;">0%</div>
+                </div>
+                <div class="stat-card">
+                    <div style="font-size: 0.75rem; color: #7ca3cc; font-weight: 700; text-transform: uppercase;">
+                        Distribución por Niveles</div>
+                    <div id="stat-barras"
+                        style="font-size: 0.8rem; color: #ffffff; margin-top: 0.2rem; line-height: 1.3;">
+                        Fuerte: 0 | Media: 0 | Débil: 0 | Crítico: 0
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controles algorítmicos con ordenamiento integrado -->
+            <div id="filtros-contenedor"
+                style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
                 <input type="text" id="buscar-historial" placeholder="Buscar por servicio...">
                 <select id="filtro-nivel">
                     <option value="">Todos los niveles</option>
                     <option value="Fuerte">Fuerte</option>
                     <option value="Media">Media</option>
                     <option value="Débil">Débil</option>
+                    <option value="Crítico">Crítico</option>
+                </select>
+                <!-- 🎯 NUEVO: Selector de ordenamiento requerido -->
+                <select id="ordenar-historial">
+                    <option value="fecha-desc">Fecha: Más reciente</option>
+                    <option value="fecha-asc">Fecha: Más antigua</option>
+                    <option value="puntaje-desc">Puntaje: Mayor a menor</option>
+                    <option value="puntaje-asc">Puntaje: Menor a mayor</option>
                 </select>
             </div>
 
@@ -50,11 +82,12 @@
                             <th>Puntaje</th>
                             <th>Nivel de Seguridad</th>
                             <th>Estado</th>
+                            <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody id="lista-evaluaciones">
                         <tr>
-                            <td colspan="6" style="text-align: center;">No hay evaluaciones registradas en esta consola.
+                            <td colspan="7" style="text-align: center;">No hay evaluaciones registradas en esta consola.
                             </td>
                         </tr>
                     </tbody>
@@ -63,6 +96,7 @@
 
             <div id="acciones-datos">
                 <button id="btn-cargar-ejemplos" class="btn-action">Cargar registros de auditoría</button>
+                <button id="btn-exportar-json" class="btn-action btn-export">Exportar registros en JSON</button>
             </div>
         </section>
     </main>
