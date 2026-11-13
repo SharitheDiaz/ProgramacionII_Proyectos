@@ -186,14 +186,14 @@
             const esComun = this.contrasenasComunes.some(comun => claveMinuscula.includes(comun));
 
             const score = esComun ? 0 : this.evaluar();
-            const niveles = ['Crítico', 'Débil', 'Débil', 'Media', 'Media', 'Fuerte'];
+            const niveles = ['Débil', 'Media', 'Fuerte'];
 
             const nuevoLog = {
                 fecha: new Date().toISOString(),
                 servicio: servicio,
                 longitud: clave.length,
                 puntaje: score,
-                nivel: esComun ? 'Crítico' : niveles[score]
+                nivel: esComun ? 'Debil' : niveles[score]
             };
 
             if (window.CryptoStorage) {
